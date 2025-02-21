@@ -274,12 +274,7 @@
             <!-- Navbar superior -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top top-navbar">
                 <div class="container-fluid">
-                    <button class="btn btn-toggle" id="menu-toggle">
-                        <i class="bi bi-list"></i> Menú
-                    </button>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                   
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item dropdown">
