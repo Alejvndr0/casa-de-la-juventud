@@ -40,7 +40,7 @@
             width: 100%;
             z-index: 1000;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, padding 0.3s ease;
         }
 
         .navbar-brand {
@@ -59,6 +59,7 @@
 
         .navbar-toggler {
             border: none;
+            color: #fff;
         }
 
         .navbar-nav .nav-link {
@@ -76,7 +77,7 @@
 
         /* Main Content */
         .main-content {
-            min-height: calc(100vh - 80px - 60px); /* Ajustado para navbar y footer */
+            min-height: calc(100vh - 80px - 60px);
             padding: 5rem 2rem 2rem;
             margin: 80px auto 2rem;
             max-width: 1200px;
@@ -141,12 +142,13 @@
             }
 
             .navbar-nav .nav-link {
+                font-size: 1rem;
                 padding: 0.5rem 1rem;
             }
 
             .main-content {
-                padding: 3rem 1rem 1rem;
-                margin: 70px auto 1rem;
+                padding: 4rem 1.5rem 1.5rem;
+                margin: 70px auto 1.5rem;
             }
 
             .card {
@@ -155,35 +157,96 @@
         }
 
         @media (max-width: 768px) {
+            .navbar {
+                padding: 0.75rem 1rem;
+            }
+
             .navbar-brand {
                 font-size: 1.25rem;
             }
 
+            .navbar-nav .nav-link {
+                font-size: 0.95rem;
+                padding: 0.5rem 0.75rem;
+            }
+
             .main-content {
-                padding: 3rem 0.5rem 0.5rem;
+                padding: 3rem 1rem 1rem;
+                margin: 60px auto 1rem;
+            }
+
+            .card {
+                padding: 1.25rem;
+            }
+
+            .btn-primary {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.95rem;
             }
         }
 
         @media (max-width: 576px) {
             .navbar {
-                padding: 0.75rem 1rem;
+                padding: 0.5rem 0.75rem;
             }
 
             .navbar-brand {
                 font-size: 1.1rem;
             }
 
-            .btn-primary {
-                padding: 0.5rem 1.5rem;
-                font-size: 0.9rem;
+            .navbar-nav .nav-link {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.5rem;
+            }
+
+            .main-content {
+                padding: 2.5rem 0.5rem 0.5rem;
+                margin: 50px auto 0.5rem;
             }
 
             .card {
                 padding: 1rem;
             }
 
+            .btn-primary {
+                padding: 0.5rem 1.2rem;
+                font-size: 0.85rem;
+            }
+
             footer {
                 padding: 1.5rem 0.5rem;
+            }
+
+            footer p {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .navbar-brand {
+                font-size: 1rem;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.4rem;
+            }
+
+            .main-content {
+                padding: 2rem 0.25rem 0.25rem;
+            }
+
+            .card {
+                padding: 0.75rem;
+            }
+
+            .btn-primary {
+                padding: 0.4rem 1rem;
+                font-size: 0.75rem;
+            }
+
+            footer p {
+                font-size: 0.75rem;
             }
         }
     </style>
@@ -211,11 +274,11 @@
             </div>
         </nav>
 
-        <!-- Contenido principal -->
+        <!-- Main Content -->
         <div class="main-content">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 col-md-10">
+                    <div class="col-lg-8 col-md-10 col-sm-12">
                         <div class="card">
                             @yield('content')
                         </div>
