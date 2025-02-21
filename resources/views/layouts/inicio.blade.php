@@ -53,7 +53,7 @@
         <nav id="sidebar" class="bg-dark text-white">
             <div class="sidebar-header text-center py-4">
                 <a class="navbar-brand text-white" href="{{ route('welcome') }}">
-                    <img src="{{ asset('img/def-.png') }}" alt="Logo" style="height: 50px;">
+                    <img src="{{ asset('IMG/def-.png') }}" alt="Logo" style="height: 50px;">
                     <h4>Casa de la Juventud</h4>
                 </a>
             </div>
