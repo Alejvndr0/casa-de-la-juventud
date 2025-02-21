@@ -26,7 +26,7 @@ COPY . .
 
 RUN composer install --optimize-autoloader --no-dev \
     && npm install \
-    && npm run build
+    && npm run build || (echo "Vite build failed" && exit 1)
 
 RUN chown -R www-data:www-data /var/www \
     && chmod -R 755 /var/www/storage
