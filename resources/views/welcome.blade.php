@@ -191,7 +191,7 @@
         <div class="container">
             <!-- Reemplazamos el texto por el logo -->
             <a class="navbar-brand" href="{{ route('inscrip.create') }}">
-                <img src="{{ asset('img/def-.png') }}" alt="Logo Casa de la Juventud" class="logo-img">
+                <img src="{{ asset('IMG/def-.png') }}" alt="Logo Casa de la Juventud" class="logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -220,7 +220,7 @@
 
   
 <section class="container-fluid p-0 position-relative">
-    <img src="{{ asset('img/juve3.png') }}" alt="Imagen de la Institución" class="institution-image">
+    <img src="{{ asset('IMG/juve3.png') }}" alt="Imagen de la Institución" class="institution-image">
     <div class="image-overlay">
         <h1 class="image-title">CASA DE LA JUVENTUD</h1>
     </div>
