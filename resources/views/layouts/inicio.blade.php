@@ -191,11 +191,32 @@
             .top-navbar {
                 padding: 0.75rem 1rem;
             }
+
+            .navbar-brand {
+                font-size: 1.25rem;
+            }
+
+            .navbar-brand img {
+                height: 50px;
+            }
+
+            .nav-link {
+                font-size: 1rem;
+            }
+
+            .content-container {
+                padding: 1.5rem;
+            }
+
+            .welcome-message {
+                padding: 1.5rem;
+            }
         }
 
         @media (max-width: 768px) {
             #sidebar {
                 margin-left: -250px;
+                width: 220px;
             }
 
             #wrapper.toggled #sidebar {
@@ -206,35 +227,136 @@
                 margin-left: 0;
             }
 
+            .top-navbar {
+                padding: 0.5rem 0.75rem;
+            }
+
+            .top-navbar .btn-toggle {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .top-navbar .nav-link {
+                font-size: 0.95rem;
+                padding: 0.5rem 0.75rem;
+            }
+
             .content-container {
                 padding: 1rem;
             }
 
+            .welcome-message {
+                padding: 1rem;
+            }
+
             .welcome-message h1 {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
             }
 
             .welcome-message p {
-                font-size: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .dropdown-menu {
+                width: 100%;
+                text-align: center;
             }
         }
 
         @media (max-width: 576px) {
+            #sidebar {
+                width: 200px;
+            }
+
+            #sidebar.toggled {
+                margin-left: -200px;
+            }
+
+            .sidebar-header {
+                padding: 1.5rem 0.5rem;
+            }
+
             .navbar-brand {
-                font-size: 1.25rem;
+                font-size: 1.1rem;
             }
 
             .navbar-brand img {
                 height: 40px;
             }
 
-            .top-navbar .nav-link {
-                font-size: 1rem;
+            #sidebar .nav-link {
+                font-size: 0.95rem;
+                padding: 0.75rem 1rem;
+            }
+
+            #sidebar .nav-link:hover, #sidebar .nav-link.active {
+                padding-left: 1.5rem;
+            }
+
+            .top-navbar {
+                padding: 0.5rem 0.5rem;
             }
 
             .top-navbar .btn-toggle {
-                padding: 0.4rem 0.8rem;
+                padding: 0.3rem 0.6rem;
+                font-size: 0.85rem;
+            }
+
+            .top-navbar .nav-link {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.5rem;
+            }
+
+            .content-container {
+                padding: 0.75rem;
+            }
+
+            .welcome-message {
+                padding: 0.75rem;
+            }
+
+            .welcome-message h1 {
+                font-size: 1.25rem;
+            }
+
+            .welcome-message p {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            #sidebar {
+                width: 180px;
+            }
+
+            #sidebar.toggled {
+                margin-left: -180px;
+            }
+
+            .navbar-brand {
+                font-size: 1rem;
+            }
+
+            .navbar-brand img {
+                height: 35px;
+            }
+
+            #sidebar .nav-link {
                 font-size: 0.9rem;
+                padding: 0.6rem 0.75rem;
+            }
+
+            .top-navbar .btn-toggle {
+                font-size: 0.75rem;
+                padding: 0.25rem 0.5rem;
+            }
+
+            .welcome-message h1 {
+                font-size: 1.1rem;
+            }
+
+            .welcome-message p {
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -274,7 +396,12 @@
             <!-- Navbar superior -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top top-navbar">
                 <div class="container-fluid">
-                   
+                    <button class="btn btn-toggle" id="menu-toggle">
+                        <i class="bi bi-list"></i> Menú
+                    </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item dropdown">
