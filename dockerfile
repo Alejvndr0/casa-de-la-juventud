@@ -22,8 +22,7 @@ WORKDIR /var/www
 COPY . .
 RUN composer install --optimize-autoloader --no-dev \
     && npm install \
-    && npm run build \
-    && ls -la /var/www/public/img
+    && npm run build 
 
 RUN chown -R www-data:www-data /var/www \
     && chmod -R 755 /var/www/storage
