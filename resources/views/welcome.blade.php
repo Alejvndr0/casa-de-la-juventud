@@ -92,6 +92,7 @@
         .hero-content {
             position: relative;
             z-index: 1;
+            padding: 0 1rem;
         }
 
         .hero-content h1 {
@@ -244,7 +245,7 @@
         footer {
             background: linear-gradient(135deg, #2d3748, #1a202c);
             color: #fff;
-            padding: 3rem 2rem;
+            padding: 3rem 1rem;
             text-align: center;
         }
 
@@ -255,7 +256,7 @@
 
         .footer-links a {
             color: #f8bbd0;
-            margin: 0 1.5rem;
+            margin: 0 1rem;
             font-size: 1.2rem;
             text-decoration: none;
             transition: color 0.3s ease;
@@ -290,20 +291,50 @@
 
         /* Responsividad */
         @media (max-width: 992px) {
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+
+            .logo-img {
+                height: 40px;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+
             .hero-content h1 {
-                font-size: 3.5rem;
+                font-size: 3rem;
             }
 
             .hero-content p {
                 font-size: 1.25rem;
             }
 
+            .hero-content .btn {
+                font-size: 1rem;
+                padding: 0.6rem 2rem;
+            }
+
             .about-section h2, .services-section h2, .gallery-section h2 {
                 font-size: 2.5rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
             }
         }
 
         @media (max-width: 768px) {
+            .navbar {
+                padding: 0.75rem 1rem;
+            }
+
+            .hero-section {
+                height: 80vh;
+            }
+
             .hero-content h1 {
                 font-size: 2.5rem;
             }
@@ -313,35 +344,119 @@
             }
 
             .hero-content .btn {
-                font-size: 1rem;
-                padding: 0.5rem 2rem;
+                font-size: 0.9rem;
+                padding: 0.5rem 1.5rem;
+            }
+
+            .about-section, .services-section, .gallery-section {
+                padding: 3rem 1rem;
             }
 
             .gallery-card img {
                 height: 200px;
             }
+
+            .service-card i {
+                font-size: 2rem;
+            }
+
+            .service-card h3 {
+                font-size: 1.25rem;
+            }
         }
 
         @media (max-width: 576px) {
             .navbar-brand {
-                font-size: 1.5rem;
+                font-size: 1.25rem;
             }
 
             .logo-img {
-                height: 40px;
+                height: 35px;
+                margin-right: 5px;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+
+            .hero-section {
+                height: 70vh;
+            }
+
+            .hero-content {
+                padding: 0 0.5rem;
             }
 
             .hero-content h1 {
                 font-size: 2rem;
             }
 
-            .services-section, .about-section, .gallery-section {
-                padding: 3rem 1rem;
+            .hero-content p {
+                font-size: 0.9rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-content .btn {
+                font-size: 0.85rem;
+                padding: 0.5rem 1.2rem;
+            }
+
+            .about-section h2, .services-section h2, .gallery-section h2 {
+                font-size: 2rem;
+            }
+
+            .about-section p {
+                font-size: 1rem;
+            }
+
+            .service-card {
+                padding: 1rem;
+            }
+
+            .service-card i {
+                font-size: 1.75rem;
+            }
+
+            .service-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .gallery-card img {
+                height: 150px;
             }
 
             .footer-links a {
                 display: block;
                 margin: 0.5rem 0;
+                font-size: 1rem;
+            }
+
+            footer {
+                padding: 2rem 0.5rem;
+            }
+
+            footer p, .contact-info p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero-content h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero-content p {
+                font-size: 0.85rem;
+            }
+
+            .hero-content .btn {
+                font-size: 0.75rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .gallery-card img {
+                height: 120px;
             }
         }
     </style>
@@ -404,20 +519,20 @@
     <section class="services-section">
         <h2>Nuestros Servicios</h2>
         <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4 col-sm-6">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-10">
                     <div class="service-card">
                         <i class="bi bi-music-note-beamed"></i>
                         <h3>Danza de Salón</h3>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-10">
                     <div class="service-card">
                         <i class="bi bi-mic-fill"></i>
                         <h3>Canto e Instrumentos</h3>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-10">
                     <div class="service-card">
                         <i class="bi bi-people-fill"></i>
                         <h3>Danza Folklórica</h3>
@@ -431,8 +546,8 @@
     <section class="gallery-section">
         <h2>Galería</h2>
         <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4 col-sm-6">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-10">
                     <div class="gallery-card">
                         <img src="{{ asset('IMG/pro1.jpg') }}" alt="Imagen de baile 1">
                         <div class="gallery-overlay">
@@ -440,7 +555,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-10">
                     <div class="gallery-card">
                         <img src="{{ asset('IMG/pro3.jpg') }}" alt="Imagen de baile 2">
                         <div class="gallery-overlay">
@@ -448,7 +563,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-6 col-sm-10">
                     <div class="gallery-card">
                         <img src="{{ asset('IMG/pro2.jpg') }}" alt="Imagen de baile 3">
                         <div class="gallery-overlay">
@@ -462,7 +577,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 Casa de la Juventud</p>
+        <p>© {{ date('Y') }} Casa de la Juventud</p>
         <div class="footer-links">
             <a href="https://www.facebook.com/profile.php?id=100083972371896&mibextid=ZbWKwL" target="_blank">Facebook</a>
             <a href="https://www.instagram.com/casadelajuventud_gamc?igsh=MWp6MGg4aGdjY3g2MA==" target="_blank">Instagram</a>
