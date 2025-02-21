@@ -5,8 +5,20 @@ services:
     dockerfilePath: ./Dockerfile
     envVars:
       - key: APP_KEY
-        value: base64:mXEM1XS7GwsBoSuMobkEjAkxww3v1pB6IhOnajDxoqc= # Pega tu clave aquí
+        value: base64:mXEM1XS7GwsBoSuMobkEjAkxww3v1pB6IhOnajDxoqc=
       - key: APP_ENV
         value: production
       - key: APP_DEBUG
         value: true
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        value: dpg-cus8mgl6l47c73ahsh2g-a
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        value: juve
+      - key: DB_USERNAME
+        value: juve_user
+      - key: DB_PASSWORD
+        value: puLr2JcoPzgsTb9eKj3hc2VWkRKPAOmz
