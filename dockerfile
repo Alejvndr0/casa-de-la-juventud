@@ -20,14 +20,14 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
 WORKDIR /var/www
 
 COPY . .
-
 RUN composer install --optimize-autoloader --no-dev \
     && npm install \
-    && npm run build
+    && npm run build \
+    && ls -la /var/www/public/img
 
 RUN chown -R www-data:www-data /var/www \
     && chmod -R 755 /var/www/storage
 
 EXPOSE 10000
 
-CMD php artisan migrate --force  && php artisan serve --host=0.0.0.0 --port=10000 --public=/var/www/public
+CMD php artisan migrate --force  && php artisan serve --host=0.0.0.0 --port=10000 
