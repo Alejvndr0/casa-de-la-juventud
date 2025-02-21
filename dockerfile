@@ -1,6 +1,6 @@
 FROM php:8.2-cli
 
-# Instalar dependencias del sistema
+# Instalar dependencias del sistema, incluyendo libpq-dev para PostgreSQL
 RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg-dev \
@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     git \
     curl \
+    libpq-dev \  # Añadido para soporte de PostgreSQL
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd zip pdo pdo_mysql pdo_pgsql
 
