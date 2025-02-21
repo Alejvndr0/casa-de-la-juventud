@@ -30,4 +30,4 @@ RUN chown -R www-data:www-data /var/www \
 
 EXPOSE 10000
 
-CMD php artisan migrate --force  && ls -la /var/www/public/img && php artisan serve --host=0.0.0.0 --port=10000
+CMD php artisan migrate --force  && ls -la /var/www/public/IMG && php artisan serve --host=0.0.0.0 --port=10000

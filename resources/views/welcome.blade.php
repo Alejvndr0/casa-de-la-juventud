@@ -279,13 +279,13 @@
         <h2 class="text-center">GALERÍA</h2>
         <div class="row">
             <div class="col-md-4 mb-3">
-                <img src="{{ asset('img/pro1.jpg') }}" class="img-fluid img-gallery" alt="Imagen de baile 1">
+                <img src="{{ asset('IMG/pro1.jpg') }}" class="img-fluid img-gallery" alt="Imagen de baile 1">
             </div>
             <div class="col-md-4 mb-3">
-                <img src="{{ asset('img/pro3.jpg') }}" class="img-fluid img-gallery" alt="Imagen de baile 2">
+                <img src="{{ asset('IMG/pro3.jpg') }}" class="img-fluid img-gallery" alt="Imagen de baile 2">
             </div>
             <div class="col-md-4 mb-3">
-                <img src="{{ asset('img/pro2.jpg') }}" class="img-fluid img-gallery" alt="Imagen de baile 3">
+                <img src="{{ asset('IMG/pro2.jpg') }}" class="img-fluid img-gallery" alt="Imagen de baile 3">
             </div>
         </div>
     </section>
